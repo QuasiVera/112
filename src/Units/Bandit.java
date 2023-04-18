@@ -1,7 +1,7 @@
 package Units;
 
 public class Bandit extends Infantry{
-    protected int invisibility; // невидимость
+    protected int invisibility; // невидимость, может и не надо, пусть пока будет
 
     public Bandit(String name, int health, int[] damage, int armor, int tool, int invisibility) {
         super(name, health, damage, armor, tool);
@@ -12,7 +12,7 @@ public class Bandit extends Infantry{
     }
 
     @Override
-    public String toString() {
+    public String getInfo() {
         return String.format("%s  invisibility: %d", super.getInfo(), this.invisibility);
     }
 }

@@ -1,7 +1,7 @@
 package Units;
 
-public class Sniper extends Shooter {
-    public Sniper(String name) {
+public class Arbalester extends Shooter{
+    public Arbalester(String name) {
         super(name, 1, new int [] {1,3}, 2, 1,1);
     }
 
@@ -10,6 +10,5 @@ public class Sniper extends Shooter {
         return String.format("%s  arrows: %d  accuracy: %d",
                 super.getInfo(), this.arrows, this.accuracy);
     }
-
 
 }

@@ -1,8 +1,9 @@
 package Units;
 
+import java.util.Arrays;
 import java.util.Random;
 
-public abstract class Hero {
+public abstract class Hero implements GameInterface{
 
     protected String name;
     protected int health;
@@ -18,7 +19,7 @@ public abstract class Hero {
 
 
 
-    public Hero(String name, int health, int[] damage, int armor) {
+    protected Hero(String name, int health, int[] damage, int armor) {
         this.name = name;
         this.health = health;
         this.maxHealth = health;
@@ -27,10 +28,10 @@ public abstract class Hero {
     }
 
     public String getInfo() {
-        return String.format("Name: %s  Health: %d  Type: %s",
-                this.name, this.health, this.getClass().getSimpleName());
-    }
+       return String.format("Name: %s  Health: %d  Type: %s Damage: %s Armor %d" ,
+                this.name, this.health, this.getClass().getSimpleName(), Arrays.toString(this.damage), this.armor);
 
+    }
 
     public void healed(int Hp) {
         this.health = Hp + this.health > this.maxHealth ? this.maxHealth : Hp + this.health;
@@ -48,5 +49,13 @@ public abstract class Hero {
         target.getDamage(damage);
     }
 
+    @Override
+    public void step() {
 
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
 }

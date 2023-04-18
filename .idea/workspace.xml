@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77cc9ce6-4aec-4a83-833b-c4617d4bc087" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OOPGame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Bandit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Hero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Infantry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Magian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Shooter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Sniper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Spearman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Witcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Units/Arbalester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Units/GameInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Units/Monk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Units/Peasant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Bandit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Infantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Magian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Magian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Units/Witcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Witcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +47,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

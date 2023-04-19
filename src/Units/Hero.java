@@ -33,11 +33,11 @@ public abstract class Hero implements GameInterface{
 
     }
 
-    public void healed(int Hp) {
+    protected void healed(int Hp) {
         this.health = Hp + this.health > this.maxHealth ? this.maxHealth : Hp + this.health;
     }
 
-    public void getDamage(int doneDamage) {
+    protected void getDamage(int doneDamage) {
             doneDamage = (int) (doneDamage * ((100 - this.armor) / 100));
             if ((this.health - doneDamage) > 0) {
                 this.health -= doneDamage;
@@ -45,8 +45,7 @@ public abstract class Hero implements GameInterface{
     }
 
     public void attack(Hero target) {
-        int damage = Hero.rnd.nextInt(this.damage[0], this.damage[1]); // предположим пока, что в int[] damage только 2 числа
-        target.getDamage(damage);
+        target.getDamage(new Random().nextInt(this.damage[0], this.damage[1]));     // предположим пока, что в int[] damage только 2 числа
     }
 
     @Override

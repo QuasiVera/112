@@ -1,5 +1,7 @@
 package Units;
 
+import java.util.Random;
+
 public abstract class Magian extends Hero{ // герои с магическими способностями
     protected int mana;
     protected int maxMana;
@@ -11,8 +13,8 @@ public abstract class Magian extends Hero{ // герои с магическим
         this.maxMana = mana;
         this.accuracy = accuracy;
     }
-    protected void heal(Hero hero){
-
+    protected void heal(Hero target){
+        target.healed(new Random().nextInt(this.damage[0],this.damage[1]));
     }
 
 }

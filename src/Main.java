@@ -54,17 +54,6 @@ public class Main {
         System.out.println("-------");
         team2.forEach(unit-> System.out.println(unit.getInfo()));
 
-//
-//        Hero hero1 = new Sniper("Vasily");
-//        Hero hero2 = new Spearman("Gregory");
-//        Hero hero3 = new Witcher("Stephen");
-//        Hero hero4 = new Bandit("Midori");
-
-
-//        System.out.println(hero1.toString());
-//        System.out.println(hero2.toString());
-//        System.out.println(hero3.toString());
-//        System.out.println(hero4.toString());
 
 
 

@@ -49,16 +49,18 @@ public class Main {
                     break;
             }
         }
-
-
+        ArrayList<Hero> all = new ArrayList<>();
+        all.addAll(team1);
+        all.addAll(team2);
         //team1.forEach(unit-> System.out.println(unit.getInfo()));
         System.out.println("-------");
         team2.forEach(unit-> System.out.println(unit.getInfo()));
         System.out.println("---");
-        team2.forEach(unit->unit.step());
-        team2.forEach(unit-> System.out.println(unit.getInfo()));
-//        team2.sort(Hero::compareTo);
-//        System.out.println(team2);
+        //System.out.println(all);
+//        team2.forEach(unit->unit.step());
+//        team2.forEach(unit-> System.out.println(unit.getInfo()));
+        all.sort(Hero::compareTo);
+        System.out.println(all);
 
 
     }

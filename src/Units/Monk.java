@@ -1,9 +1,11 @@
 package Units;
 
-public class Monk extends Magian{
-    public Monk(String name) {
+import java.util.ArrayList;
 
-        super(name, 13, new int [] {1,4}, 3, 3,1);
+public class Monk extends Magian{
+    public Monk(ArrayList<Hero> team, String name) {
+
+        super(5, team,name, 13, new int [] {1,4}, 3, 3,1);
     }
 
     @Override

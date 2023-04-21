@@ -1,8 +1,10 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Arbalester extends Shooter{
-    public Arbalester(String name) {
-        super(name, 1, new int [] {1,3}, 2, 1,1);
+    public Arbalester(ArrayList<Hero> team, String name) {
+        super(6,team, name, 10, new int [] {1,3}, 2, 1,1,1);
     }
 
     @Override

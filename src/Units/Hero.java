@@ -1,16 +1,20 @@
 package Units;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public abstract class Hero implements GameInterface{
+public abstract class Hero implements GameInterface, Comparable{
 
+    protected int initiative;
     protected String name;
     protected int health;
     protected int maxHealth;
     protected int[] damage;
     protected int armor; // броня
     protected static Random rnd;
+
+    protected ArrayList<Hero> team;
 
 
     static {
@@ -19,17 +23,21 @@ public abstract class Hero implements GameInterface{
 
 
 
-    protected Hero(String name, int health, int[] damage, int armor) {
+    protected Hero(int initiative, ArrayList<Hero> team, String name, int health, int[] damage, int armor) {
+        this.initiative = initiative;
+        this.team = team;
         this.name = name;
         this.health = health;
         this.maxHealth = health;
+        if (new Random().nextBoolean()) this.health-=9;
         this.damage = damage;
         this.armor = armor;
     }
 
     public String getInfo() {
-       return String.format("Name: %s  Health: %d  Type: %s Damage: %s Armor %d" ,
-                this.name, this.health, this.getClass().getSimpleName(), Arrays.toString(this.damage), this.armor);
+       return String.format("Name: %s  Health: %d  Type: %s Damage: %s Armor %d Init %d" ,
+                this.name, this.health, this.getClass().getSimpleName(),
+               Arrays.toString(this.damage), this.armor, this.initiative);
 
     }
 
@@ -56,5 +64,11 @@ public abstract class Hero implements GameInterface{
     @Override
     public String toString() {
         return this.getClass().getSimpleName();
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Hero hero = (Hero)o;
+        return hero.initiative-this.initiative;
     }
 }

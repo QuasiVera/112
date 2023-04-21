@@ -53,7 +53,7 @@ public abstract class Hero implements GameInterface, Comparable{
     }
 
     public void attack(Hero target) {
-        target.getDamage(new Random().nextInt(this.damage[0], this.damage[1]));     // предположим пока, что в int[] damage только 2 числа
+        target.getDamage(new Random().nextInt(this.damage[0], this.damage[1]+1));     // предположим пока, что в int[] damage только 2 числа
     }
 
     @Override

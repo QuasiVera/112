@@ -54,10 +54,11 @@ public class Main {
         //team1.forEach(unit-> System.out.println(unit.getInfo()));
         System.out.println("-------");
         team2.forEach(unit-> System.out.println(unit.getInfo()));
-        //team2.forEach(unit->unit.step());
+        System.out.println("---");
+        team2.forEach(unit->unit.step());
         team2.forEach(unit-> System.out.println(unit.getInfo()));
-        team2.sort(Hero::compareTo);
-        System.out.println(team2);
+//        team2.sort(Hero::compareTo);
+//        System.out.println(team2);
 
 
     }

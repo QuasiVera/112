@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Witcher extends Magian {
     public Witcher(ArrayList<Hero> team,String name) {
 
-        super(5,team,name, 14, new int [] {1,4}, 3, 3,1);
+        super(5,team,name, 10, new int [] {3,7}, 3, 9,1);
     }
 
     @Override

@@ -20,23 +20,22 @@ public abstract class Magian extends Hero { // герои с магически�
 
     @Override
     public void step() {
-
-        if(mana<1){
-            System.out.println("Нет маны");
+        int Hp = new Random().nextInt(this.damage[0],this.damage[1]+1);
+        if(mana<1 || mana<Hp){
+            System.out.println("Не достаточно маны");
             return;
         }
-        int index_damaged =0;
+        int max_damaged =0;
+        float min = team.get(0).health / team.get(0).maxHealth;
         for (int i = 0; i < team.size(); i++) {
-            for (int j = i+1; j <team.size()-1 ; j++) {
-                if(team.get(i).health!=0 || team.get(j).health!=0) {
-                    if (team.get(i).health / team.get(i).maxHealth < team.get(j).health / team.get(j).maxHealth) {
-                        index_damaged = i;
+                    if (team.get(i).health / team.get(i).maxHealth<min && team.get(i).health!=0) {
+                        min = team.get(i).health / team.get(i).maxHealth;
+                        max_damaged = i;
                     }
-                }
-            }
         }
-        team.get(index_damaged).healed(new Random().nextInt(this.damage[0],this.damage[1]));
-        this.mana -=1;
+
+        team.get(max_damaged).healed(Hp);
+        this.mana -=Hp;
 
     }
 }

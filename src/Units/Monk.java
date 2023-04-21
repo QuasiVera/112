@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Monk extends Magian{
     public Monk(ArrayList<Hero> team, String name) {
 
-        super(5, team,name, 13, new int [] {1,4}, 3, 3,1);
+        super(5, team,name, 10, new int [] {3,6}, 3, 8,1);
     }
 
     @Override

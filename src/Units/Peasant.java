@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Peasant extends Hero{
     public Peasant (ArrayList<Hero> team, String name){
 
-        super(1, team, name, 11, new int [] {1,2}, 1);
+        super(1, team, name, 10, new int [] {1,2}, 1);
     }
 
     @Override

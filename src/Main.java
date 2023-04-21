@@ -19,16 +19,16 @@ public class Main {
         for (int i = 0; i < teamSize; i++) {                // написать метод
             switch (new Random().nextInt(1,5)){
                 case 1:
-                    team1.add(new Sniper("Vasily"));
+                    team1.add(new Sniper(getName()));
                     break;
                 case 2:
-                    team1.add(new Witcher("Stephen"));
+                    team1.add(new Witcher(getName()));
                     break;
                 case 3:
-                    team1.add(new Spearman("Sergey"));
+                    team1.add(new Spearman(getName()));
                     break;
                 case 4:
-                    team1.add(new Peasant("Fedor"));
+                    team1.add(new Peasant(getName()));
                     break;
             }
         }
@@ -36,16 +36,16 @@ public class Main {
         for (int i = 0; i < teamSize; i++) {
             switch (new Random().nextInt(1,5)){
                 case 1:
-                    team2.add(new Sniper("Vasily"));
+                    team2.add(new Arbalester(getName()));
                     break;
                 case 2:
-                    team2.add(new Witcher("Stephen"));
+                    team2.add(new Monk(getName()));
                     break;
                 case 3:
-                    team2.add(new Spearman("Sergey"));
+                    team2.add(new Bandit(getName()));
                     break;
                 case 4:
-                    team2.add(new Peasant("Fedor"));
+                    team2.add(new Peasant(getName()));
                     break;
             }
         }
@@ -69,4 +69,9 @@ public class Main {
 
 
     }
+
+    static String getName(){
+        return String.valueOf(Names.values()[new Random().nextInt(Names.values().length)]);
+    }
+
 }

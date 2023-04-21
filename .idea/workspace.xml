@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77cc9ce6-4aec-4a83-833b-c4617d4bc087" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Units/Arbalester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/GameInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Monk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Units/Peasant.java" afterDir="false" />
+    <list default="true" id="ef5477a3-13fd-4d8e-b0c9-462ee2d51693" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Bandit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Infantry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Magian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Magian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Sniper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Witcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Units/Witcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,58 +23,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Units/Hero.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2OZ1pJkCLh2REl7L5VpAmuomx9K" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2Oe5TQfYsS5MPPJxrUiFqs7Pb7u" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Гит/JavaOOP/OOPGame"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="OOPGame" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="77cc9ce6-4aec-4a83-833b-c4617d4bc087" name="Changes" comment="" />
-      <created>1681753479405</created>
+      <changelist id="ef5477a3-13fd-4d8e-b0c9-462ee2d51693" name="Changes" comment="" />
+      <created>1681908214019</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1681753479405</updated>
+      <updated>1681908214019</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

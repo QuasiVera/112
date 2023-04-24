@@ -59,7 +59,8 @@ public class Main {
         //System.out.println(all);
 //        team2.forEach(unit->unit.step());
 //        team2.forEach(unit-> System.out.println(unit.getInfo()));
-        all.sort(Hero::compareTo);
+       // all.sort(Hero::compareTo);
+        all.sort(new InitComparator());
         System.out.println(all);
 
 

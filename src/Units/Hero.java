@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public abstract class Hero implements GameInterface, Comparable{
+public abstract class Hero implements GameInterface, Comparable<Hero>{
 
     protected int initiative;
     protected String name;
@@ -67,8 +67,7 @@ public abstract class Hero implements GameInterface, Comparable{
     }
 
     @Override
-    public int compareTo(Object o) {
-        Hero hero = (Hero)o;
-        return hero.initiative-this.initiative;
+    public int compareTo(Hero o) {
+        return o.initiative-this.initiative;
     }
 }

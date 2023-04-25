@@ -14,54 +14,58 @@ public class Main {
 
 
 
-        int teamSize = 10;
+        int teamSize = 5;
 
-        for (int i = 0; i < teamSize; i++) {                // написать метод
+        for (int i = 1; i < teamSize+1; i++) {                // написать метод
             switch (new Random().nextInt(1,5)){
                 case 1:
-                    team1.add(new Sniper(team1,getName()));
+                    team1.add(new Sniper(team1,getName(),1,i));
                     break;
                 case 2:
-                    team1.add(new Witcher(team1,getName()));
+                    team1.add(new Witcher(team1,getName(), 1,i));
                     break;
                 case 3:
-                    team1.add(new Spearman(team1,getName()));
+                    team1.add(new Spearman(team1,getName(), 1, i));
                     break;
                 case 4:
-                    team1.add(new Peasant(team1,getName()));
+                    team1.add(new Peasant(team1,getName(),1,i));
                     break;
             }
         }
 
-        for (int i = 0; i < teamSize; i++) {
+        for (int i = 1; i < teamSize+1; i++) {
             switch (new Random().nextInt(1,5)){
                 case 1:
-                    team2.add(new Arbalester(team2,getName()));
+                    team2.add(new Arbalester(team2,getName(), 10, i));
                     break;
                 case 2:
-                    team2.add(new Monk(team2, getName()));
+                    team2.add(new Monk(team2, getName(), 10, i));
                     break;
                 case 3:
-                    team2.add(new Bandit(team2,getName()));
+                    team2.add(new Bandit(team2,getName(), 10, i));
                     break;
                 case 4:
-                    team2.add(new Peasant(team2,getName()));
+                    team2.add(new Peasant(team2,getName(), 10, i));
                     break;
             }
         }
         ArrayList<Hero> all = new ArrayList<>();
         all.addAll(team1);
         all.addAll(team2);
-        //team1.forEach(unit-> System.out.println(unit.getInfo()));
-        System.out.println("-------");
+        System.out.println("-------команда 1");
+        team1.forEach(unit-> System.out.println(unit.getInfo()));
+        System.out.println("-------команда 2");
         team2.forEach(unit-> System.out.println(unit.getInfo()));
         System.out.println("---");
         //System.out.println(all);
-//        team2.forEach(unit->unit.step());
-//        team2.forEach(unit-> System.out.println(unit.getInfo()));
+        team2.forEach(unit->unit.step(team1,team2 ));
+        System.out.println("после атаки \n --------команда 1");
+        team1.forEach(unit-> System.out.println(unit.getInfo()));
+        System.out.println("------- команда 2");
+        team2.forEach(unit-> System.out.println(unit.getInfo()));
        // all.sort(Hero::compareTo);
-        all.sort(new InitComparator());
-        System.out.println(all);
+//        all.sort(new InitComparator());
+//        System.out.println(all);
 
 
     }

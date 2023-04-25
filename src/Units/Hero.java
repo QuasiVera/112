@@ -15,7 +15,8 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     protected static Random rnd;
 
     protected ArrayList<Hero> team;
-
+    protected Coordinates coordinates;
+    protected String state;
 
     static {
         Hero.rnd = new Random();
@@ -23,13 +24,14 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
 
 
 
-    protected Hero(int initiative, ArrayList<Hero> team, String name, int health, int[] damage, int armor) {
+    protected Hero(int x, int y, int initiative, ArrayList<Hero> team, String name, int health, int[] damage, int armor) {
+        this.coordinates = new Coordinates(x,y);
         this.initiative = initiative;
         this.team = team;
         this.name = name;
         this.health = health;
         this.maxHealth = health;
-        if (new Random().nextBoolean()) this.health-=9;
+        //if (new Random().nextBoolean()) this.health-=9; //задать изначальное повреждение герою
         this.damage = damage;
         this.armor = armor;
     }
@@ -46,7 +48,8 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     }
 
     protected void getDamage(int doneDamage) {
-            doneDamage = (int) (doneDamage * ((100 - this.armor) / 100));
+            //doneDamage = (int) (doneDamage * ((100 - this.armor) / 100)); плохо работает на маленьких числах
+            doneDamage =  doneDamage-armor;
             if ((this.health - doneDamage) > 0) {
                 this.health -= doneDamage;
             } // тут будет метод умирания, если полученный урон > текущего здоровья
@@ -57,7 +60,7 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     }
 
     @Override
-    public void step() {
+    public void step(ArrayList<Hero> enemy, ArrayList<Hero> friend) {
 
     }
 

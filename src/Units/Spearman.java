@@ -3,9 +3,9 @@ package Units;
 import java.util.ArrayList;
 
 public class Spearman extends Infantry {  // копейщик
-    public Spearman (ArrayList<Hero> team,String name){
+    public Spearman (ArrayList<Hero> team,String name, int x, int y){
 
-        super(7,team, name, 10, new int [] {1,3}, 2, 2);
+        super(x,y, 7,team, name, 10, new int [] {1,3}, 2, 2);
     }
 
     @Override

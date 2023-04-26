@@ -58,12 +58,15 @@ public class Main {
         team2.forEach(unit-> System.out.println(unit.getInfo()));
         System.out.println("---");
         //System.out.println(all);
+        // all.sort(Hero::compareTo);
+        //all.forEach(unit->unit.step(team1,team2 ));
+        team1.forEach(unit->unit.step(team2,team1 ));
         team2.forEach(unit->unit.step(team1,team2 ));
         System.out.println("после атаки \n --------команда 1");
         team1.forEach(unit-> System.out.println(unit.getInfo()));
         System.out.println("------- команда 2");
         team2.forEach(unit-> System.out.println(unit.getInfo()));
-       // all.sort(Hero::compareTo);
+
 //        all.sort(new InitComparator());
 //        System.out.println(all);
 

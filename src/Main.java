@@ -14,7 +14,7 @@ public class Main {
 
 
 
-        int teamSize = 5;
+        int teamSize = 10;
 
         for (int i = 1; i < teamSize+1; i++) {                // написать метод
             switch (new Random().nextInt(1,5)){

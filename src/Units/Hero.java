@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 public abstract class Hero implements GameInterface, Comparable<Hero>{
+    enum State {
+        ready, busy
+    }
 
     protected int initiative;
     protected String name;
@@ -12,15 +15,12 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     protected int maxHealth;
     protected int[] damage;
     protected int armor; // броня
-    protected static Random rnd;
 
     protected ArrayList<Hero> team;
     protected Coordinates coordinates;
-    protected String state;
+    protected State state;
 
-    static {
-        Hero.rnd = new Random();
-    }
+
 
 
 
@@ -34,6 +34,7 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
         //if (new Random().nextBoolean()) this.health-=9; //задать изначальное повреждение герою
         this.damage = damage;
         this.armor = armor;
+        this.state = State.ready;
     }
 
     public String getInfo() {
@@ -56,7 +57,7 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     }
 
     public void attack(Hero target) {
-        target.getDamage(new Random().nextInt(this.damage[0], this.damage[1]+1));     // предположим пока, что в int[] damage только 2 числа
+
     }
 
     @Override

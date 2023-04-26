@@ -11,7 +11,7 @@ public class Peasant extends Hero{
     @Override
     public String getInfo() {
 
-        return super.getInfo();
+        return super.getInfo()+" "+state;
 
     }
 

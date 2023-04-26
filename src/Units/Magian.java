@@ -20,7 +20,7 @@ public abstract class Magian extends Hero { // герои с магически�
 
     @Override
     public void step(ArrayList<Hero> enemy, ArrayList<Hero> friend) {
-        int Hp = new Random().nextInt(this.damage[0],this.damage[1]+1);
+        int Hp = new Random().nextInt(this.damage[0],this.damage[1]*accuracy);
         if(mana<1 || mana<Hp){
             System.out.println("Не достаточно маны");
             return;

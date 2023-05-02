@@ -2,17 +2,23 @@ package Units;
 
 import java.util.ArrayList;
 
-public class Peasant extends Hero{
-    public Peasant (ArrayList<Hero> team, String name, int x, int y){
+public class Peasant extends Hero {
+    public Peasant(ArrayList<Hero> team, String name, int x, int y) {
 
-        super(x, y, 1, team, name, 10, new int [] {1,2}, 1);
+        super(x, y, 1, team, name, 10, new int[]{1, 2}, 1);
     }
 
     @Override
     public String getInfo() {
 
-        return super.getInfo()+" "+state;
+        return super.getInfo() + " " + state;
 
     }
 
+    @Override
+    public void step(ArrayList<Hero> enemy, ArrayList<Hero> friend) {
+        if (this.state == State.busy) {
+            state = State.ready;
+        }
+    }
 }

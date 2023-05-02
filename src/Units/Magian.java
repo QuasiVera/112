@@ -38,4 +38,10 @@ public abstract class Magian extends Hero { // герои с магически�
         this.mana -=Hp;
 
     }
+
+    @Override
+    public String getInfo() {
+        return String.format("%s  ma: %d",
+                super.getInfo(), this.mana);
+    }
 }

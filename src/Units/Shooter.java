@@ -45,4 +45,10 @@ public abstract class Shooter extends Hero { // стрелки
         }
 
     }
+
+    @Override
+    public String getInfo() {
+        return String.format("%s  arr: %d ",
+                super.getInfo(), this.arrows);
+    }
 }

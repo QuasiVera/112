@@ -10,8 +10,6 @@ public class Spearman extends Infantry {  // копейщик
 
     @Override
     public String getInfo() {
-        return String.format("%s  tool: %d", super.getInfo(), this.tool);
+        return super.getInfo();
     }
-
-
 }

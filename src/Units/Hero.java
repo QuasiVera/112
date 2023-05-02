@@ -5,8 +5,17 @@ import java.util.Arrays;
 import java.util.Random;
 
 public abstract class Hero implements GameInterface, Comparable<Hero>{
+    public int[] getCoords() {
+        int[] coord = new int[] {coordinates.x, coordinates.y};
+        return coord;
+    }
+
+    public int getHp() {
+        return health;
+    }
+
     enum State {
-        ready, busy
+        ready, busy, die
     }
 
     protected int initiative;
@@ -38,8 +47,8 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     }
 
     public String getInfo() {
-       return String.format("Name: %s  Health: %d  Type: %s Damage: %s Armor %d Init %d" ,
-                this.name, this.health, this.getClass().getSimpleName(),
+       return String.format("N: %s  %s Hp: %d Dam: %s Ar %d In %d" ,
+                this.name, this.getClass().getSimpleName(), this.health,
                Arrays.toString(this.damage), this.armor, this.initiative);
 
     }
@@ -51,9 +60,12 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     protected void getDamage(int doneDamage) {
             //doneDamage = (int) (doneDamage * ((100 - this.armor) / 100)); плохо работает на маленьких числах
             doneDamage =  doneDamage-armor;
-            if ((this.health - doneDamage) > 0) {
-                this.health -= doneDamage;
-            } // тут будет метод умирания, если полученный урон > текущего здоровья
+            this.health -= doneDamage;
+            if (health<0){
+                health=0;
+                this.state = State.die;
+            }
+
     }
 
     public void attack(Hero target) {

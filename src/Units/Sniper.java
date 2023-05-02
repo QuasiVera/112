@@ -9,11 +9,6 @@ public class Sniper extends Shooter {
 
     }
 
-    @Override
-    public String getInfo() {
-        return String.format("%s  arrows: %d  accuracy: %d",
-                super.getInfo(), this.arrows, this.accuracy);
-    }
 
 
 }

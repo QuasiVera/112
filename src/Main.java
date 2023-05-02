@@ -2,16 +2,18 @@ import Units.*;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     /*   Создать иерархию классов для персонажей
      *  Крестьянин*	Разбойник*	Снайпер*	Колдун*
         копейщик*	арбалетчик*	монах*
      */
-    public static void main(String[] args) {
-        ArrayList<Hero> team1 = new ArrayList<>();
-        ArrayList<Hero> team2 = new ArrayList<>();
+    public static ArrayList<Hero> team1 = new ArrayList<>();
+    public static ArrayList<Hero> team2 = new ArrayList<>();
+    public static ArrayList<Hero> allTeam = new ArrayList<>();
 
+    public static void main(String[] args) {
 
 
         int teamSize = 10;
@@ -49,26 +51,41 @@ public class Main {
                     break;
             }
         }
-        ArrayList<Hero> all = new ArrayList<>();
-        all.addAll(team1);
-        all.addAll(team2);
-        System.out.println("-------команда 1");
-        team1.forEach(unit-> System.out.println(unit.getInfo()));
-        System.out.println("-------команда 2");
-        team2.forEach(unit-> System.out.println(unit.getInfo()));
-        System.out.println("---");
-        //System.out.println(all);
-        // all.sort(Hero::compareTo);
-        //all.forEach(unit->unit.step(team1,team2 ));
-        team1.forEach(unit->unit.step(team2,team1 ));
-        team2.forEach(unit->unit.step(team1,team2 ));
-        System.out.println("после атаки \n --------команда 1");
-        team1.forEach(unit-> System.out.println(unit.getInfo()));
-        System.out.println("------- команда 2");
-        team2.forEach(unit-> System.out.println(unit.getInfo()));
+        allTeam.addAll(team1);
+        allTeam.addAll(team2);
+        allTeam.sort(Hero::compareTo);
 
-//        all.sort(new InitComparator());
-//        System.out.println(all);
+        Scanner in = new Scanner(System.in);
+        while (true){
+
+            View.view();
+            in.nextLine();
+            for (Hero hero : allTeam){
+                if (team1.contains(hero)){
+                    hero.step(team1,team2);
+                }else hero.step(team2, team1);
+            }
+
+        }
+
+
+
+//        System.out.println("-------команда 1");
+//        team1.forEach(unit-> System.out.println(unit.getInfo()));
+//        System.out.println("-------команда 2");
+//        team2.forEach(unit-> System.out.println(unit.getInfo()));
+//        System.out.println("---");
+//        // all.sort(Hero::compareTo);
+//        //all.forEach(unit->unit.step(team1,team2 ));
+//        team1.forEach(unit->unit.step(team2,team1 ));
+//        team2.forEach(unit->unit.step(team1,team2 ));
+//        System.out.println("после атаки \n --------команда 1");
+//        team1.forEach(unit-> System.out.println(unit.getInfo()));
+//        System.out.println("------- команда 2");
+//        team2.forEach(unit-> System.out.println(unit.getInfo()));
+//
+////        all.sort(new InitComparator());
+////        System.out.println(all);
 
 
     }

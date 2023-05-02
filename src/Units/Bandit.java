@@ -16,6 +16,6 @@ public class Bandit extends Infantry{
 
     @Override
     public String getInfo() {
-        return String.format("%s  invisibility: %d", super.getInfo(), this.invisibility);
+        return String.format("%s  inv: %d", super.getInfo(), this.invisibility);
     }
 }

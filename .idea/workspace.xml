@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77cc9ce6-4aec-4a83-833b-c4617d4bc087" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Game/Units/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/Units/Infantry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnsiColors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/AnsiColors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Names.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Names.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Arbalester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Arbalester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Bandit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Coordinates.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/GameInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Infantry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/InitComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/InitComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Magian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Magian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Monk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Peasant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Sniper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Units/Witcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Witcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Units/Arbalester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Arbalester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Units/Infantry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Infantry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Units/Sniper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

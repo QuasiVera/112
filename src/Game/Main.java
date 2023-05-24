@@ -67,6 +67,14 @@ public class Main {
                     hero.step(team1,team2);
                 }else hero.step(team2, team1);
             }
+            if (isTeamDie(team1)){
+                System.out.println("Team 2 (Blue) win");
+                break;
+            }
+            if (isTeamDie(team2)){
+                System.out.println("Team 1 (Green) win");
+                break;
+            }
 
         }
 
@@ -96,4 +104,10 @@ public class Main {
         return String.valueOf(Names.values()[new Random().nextInt(Names.values().length)]);
     }
 
+    static boolean isTeamDie(ArrayList<Hero> team){
+        for (Hero hero: team){
+            if (!hero.die()) return false;
+        }return true;
+    }
 }
+

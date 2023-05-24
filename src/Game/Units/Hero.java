@@ -4,18 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public abstract class Hero implements GameInterface, Comparable<Hero>{
-    public int[] getCoords() {
-        int[] coord = new int[] {coordinates.x, coordinates.y};
-        return coord;
-    }
 
-    public int getHp() {
-        return health;
-    }
-
-    enum State {
-        ready, busy, die
-    }
 
     protected int initiative;
     protected String name;
@@ -92,5 +81,22 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     @Override
     public int compareTo(Hero o) {
         return o.initiative-this.initiative;
+    }
+
+    public int[] getCoords() {
+        int[] coord = new int[] {coordinates.x, coordinates.y};
+        return coord;
+    }
+
+    public int getHp() {
+        return health;
+    }
+
+    enum State {
+        ready, busy, die
+    }
+
+    public boolean die(){
+        return this.state == State.die;
     }
 }

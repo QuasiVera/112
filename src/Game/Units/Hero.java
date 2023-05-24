@@ -1,8 +1,7 @@
-package Units;
+package Game.Units;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
 
 public abstract class Hero implements GameInterface, Comparable<Hero>{
     public int[] getCoords() {
@@ -54,12 +53,20 @@ public abstract class Hero implements GameInterface, Comparable<Hero>{
     }
 
     protected void healed(int Hp) {
-        this.health = Hp + this.health > this.maxHealth ? this.maxHealth : Hp + this.health;
+        this.health = Hp + this.health >= this.maxHealth ? this.maxHealth : Hp + this.health;
     }
 
     protected void getDamage(int doneDamage) {
             //doneDamage = (int) (doneDamage * ((100 - this.armor) / 100)); плохо работает на маленьких числах
-            doneDamage =  doneDamage-armor;
+            if (this.armor>0){
+                if (this.armor-doneDamage>0)
+                    this.armor -=doneDamage;
+                else{
+                    doneDamage -=this.armor;
+                    this.health-=doneDamage;
+                    this.armor=0;
+                }
+            }
             this.health -= doneDamage;
             if (health<0){
                 health=0;

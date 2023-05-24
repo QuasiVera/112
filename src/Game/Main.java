@@ -1,4 +1,6 @@
-import Units.*;
+package Game;
+
+import Game.Units.*;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -21,7 +23,7 @@ public class Main {
         for (int i = 1; i < teamSize+1; i++) {                // написать метод
             switch (new Random().nextInt(1,5)){
                 case 1:
-                    team1.add(new Sniper(team1,getName(),1,i));
+                    team1.add(new Sniper(team1,getName(),1, i));
                     break;
                 case 2:
                     team1.add(new Witcher(team1,getName(), 1,i));
@@ -61,7 +63,7 @@ public class Main {
             View.view();
             in.nextLine();
             for (Hero hero : allTeam){
-                if (team1.contains(hero)){
+                if (team2.contains(hero)){
                     hero.step(team1,team2);
                 }else hero.step(team2, team1);
             }

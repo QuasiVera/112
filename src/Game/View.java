@@ -1,5 +1,6 @@
+package Game;
 
-import Units.Hero;
+import Game.Units.Hero;
 import java.util.Collections;
 public class View {
 
@@ -44,17 +45,17 @@ public class View {
             if (step == 1 ){
                 System.out.print(AnsiColors.ANSI_YELLOW + "First step" + AnsiColors.ANSI_RESET);
             } else {
-                System.out.print(AnsiColors.ANSI_YELLOW+ AnsiColors.ANSI_RESET);
+                System.out.print(AnsiColors.ANSI_YELLOW+ "Step " + step + AnsiColors.ANSI_RESET);
             }
             step++;
             Main.allTeam.forEach((v) -> l[0] = Math.max(l[0], v.getInfo().length()));
             System.out.print("_".repeat(l[0]*2));
             System.out.println("");
             System.out.print(top10 + "    ");
-            System.out.print(AnsiColors.ANSI_BLUE+"Blue side"+AnsiColors.ANSI_RESET);
+            System.out.print(AnsiColors.ANSI_GREEN+":\tGreen side"+AnsiColors.ANSI_RESET);
             //for (int i = 0; i < l[0]-9; i++)
             System.out.print(" ".repeat(l[0]-9));
-            System.out.println(AnsiColors.ANSI_GREEN+":\tGreen side"+AnsiColors.ANSI_RESET);
+            System.out.println(AnsiColors.ANSI_BLUE+"Blue side"+AnsiColors.ANSI_RESET);
             for (int i = 1; i < 11; i++) {
                 System.out.print(getChar(1, i));
             }

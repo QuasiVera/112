@@ -1,4 +1,4 @@
-package Units;
+package Game.Units;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -8,10 +8,10 @@ public abstract class Shooter extends Hero { // стрелки
     protected int maxArrows;
     protected int accuracy;
 
-    public Shooter(int x, int y, int init, ArrayList<Hero> team, String name, int health, int[] damage, int armor, int arrows, int maxArrows, int accuracy) {
+    public Shooter(int x, int y, int init, ArrayList<Hero> team, String name, int health, int[] damage, int armor, int arrows, int accuracy) {
         super(x, y, init, team, name, health, damage, armor);
         this.arrows = arrows;
-        this.maxArrows = maxArrows;
+        this.maxArrows = arrows;
         this.accuracy = accuracy;
     }
 
@@ -22,15 +22,16 @@ public abstract class Shooter extends Hero { // стрелки
 
     @Override
     public void step(ArrayList<Hero> enemyTeam, ArrayList<Hero> friend) {
-        if (health < 1 || arrows < 1) return;
+        if (this.health < 1 || this.arrows < 1) return;
         double min =Integer.MAX_VALUE;
 
         int index_closedEnemy =0;
         for (int i = 0; i < enemyTeam.size(); i++) {
+            if (enemyTeam.get(i).state!=State.die){
             double temp = this.coordinates.distanceSearch(enemyTeam.get(i).coordinates);
             if (temp<min){
                 index_closedEnemy =i;
-                min = temp;
+                min = temp;}
             }
         }
         attack(enemyTeam.get(index_closedEnemy));

@@ -1,4 +1,4 @@
-package Units;
+package Game.Units;
 
 import java.util.Comparator;
 
